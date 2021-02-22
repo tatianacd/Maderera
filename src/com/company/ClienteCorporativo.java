@@ -12,7 +12,7 @@ public class ClienteCorporativo extends Cliente{
 
     public void comprarCorte(Integer cantidad,String nombre, LocalDate fechaDeRetiro){
 
-        if(cantidad > 3){
+        if(cantidad > 2){
             System.out.println(" ¡ " + nombre +"! Solo puedes pedir placas enteras o uno u dos cortes");
 
         }else{

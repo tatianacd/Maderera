@@ -47,12 +47,12 @@ public class Cliente {
         if(numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3){
 
 
-            System.out.println("El total a pagar es : " + precio * cantidad);
+            System.out.println("¡ "+nombreDelCliente+" ! El total a pagar es : " + precio * cantidad);
 
 
         }else{
 
-            System.out.println("El total a pagar es: " + precio * 0.2 + precio * cantidad);
+            System.out.println("¡ "+nombreDelCliente+" ! El total a pagar es: " + precio * 0.2 + precio * cantidad);
 
         }
 
