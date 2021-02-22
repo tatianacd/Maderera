@@ -41,12 +41,8 @@ public class Cliente {
     }
 
 
-    public void comprarModelo(){
+    public void comprarModelo(Integer numeroDePlaca, LocalDate fechaDeRetiro, String nombreDelCliente, Integer cantidad){
 
-        System.out.println("Ingrese el numero de placa que quiere comprar");
-        int numeroDePlaca = sc.nextInt();
-        System.out.println("Ingrese la cantidad de placas que quiere comprar");
-        int cantidad = sc.nextInt();
 
         if(numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3){
 
