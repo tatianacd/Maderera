@@ -17,6 +17,6 @@ public class Maderera {
         cliente.comprarModelo(placa.getTipoDeModelo(),cliente.getFechaDeRetiro(), cliente.getNombre(),3);
 
         ClienteCorporativo clienteCorporativo = new ClienteCorporativo("Nick", "150 metros sur...", LocalDate.now());
-        clienteCorporativo.comprarCorte();
+        clienteCorporativo.comprarCorte(9,clienteCorporativo.getNombre(),clienteCorporativo.getFechaDeRetiro());
     }
 }
