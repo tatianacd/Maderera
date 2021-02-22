@@ -10,14 +10,13 @@ public class ClienteCorporativo extends Cliente{
         super(nombre, direccion, fechaDeRetiro);
     }
 
-    public void comprarCorte(){
-        System.out.println("Ingrese la cantidad de cortes que desea comprar: ");
-        int cantidadDeCortes = sc.nextInt();
-        if(cantidadDeCortes > 3){
-            System.out.println("Solo puedes pedir placas enteras o uno u dos cortes");
+    public void comprarCorte(Integer cantidad,String nombre, LocalDate fechaDeRetiro){
+
+        if(cantidad > 3){
+            System.out.println(" ¡ " + nombre +"! Solo puedes pedir placas enteras o uno u dos cortes");
 
         }else{
-            System.out.println("EL total a pagar es de : " + cantidadDeCortes * 150);
+            System.out.println(" ¡ " + nombre +" ! EL total a pagar es de : " + cantidad * 150);
         }
 
     }
