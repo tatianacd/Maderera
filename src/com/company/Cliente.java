@@ -43,7 +43,9 @@ public class Cliente {
 
     public void comprarModelo(Integer numeroDePlaca, LocalDate fechaDeRetiro, String nombreDelCliente, Integer cantidad){
 
+    if(fechaDeRetiro.getDayOfMonth()> 10){
 
+    }
         if(numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3){
 
 
@@ -57,6 +59,9 @@ public class Cliente {
         }
 
     }
+
+
+
 
 }
 
