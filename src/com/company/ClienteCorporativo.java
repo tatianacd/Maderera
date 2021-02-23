@@ -16,7 +16,7 @@ public class ClienteCorporativo extends Cliente{
             System.out.println(" ¡ " + nombre +"! Solo puedes pedir placas enteras o uno u dos cortes.");
 
         }else{
-            if(fechaDeRetiro.getDayOfMonth()< 10){
+            if(is10Dias(fechaDeRetiro)){
                 System.out.println(" ¡ " + nombre +" ! Como lo retiraste en los primeros 10 dias del mes tienes un 20% de descuento adicional, EL total a pagar es de : " + ((cantidad * 150) - 150 * 0.2));
             }else{
                 System.out.println(" ¡ " + nombre +" ! EL total a pagar es de : " + cantidad * 150);

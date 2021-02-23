@@ -41,10 +41,16 @@ public class Cliente {
         this.fechaDeRetiro = fechaDeRetiro;
     }
 
-
+    public boolean is10Dias(LocalDate fechaDeRetiro){
+        if(fechaDeRetiro.getDayOfMonth()< 10){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public void comprarModelo(Integer numeroDePlaca, LocalDate fechaDeRetiro, String nombreDelCliente, Integer cantidad) {
 
-        if (fechaDeRetiro.getDayOfMonth() < 10) {
+        if (is10Dias(fechaDeRetiro)) {
             if (numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3) {
                 System.out.println("¡ " + nombreDelCliente + " ! Como lo retiraste en los primeros 10 dias del mes tienes un 20% de descuento adicional,  El total a pagar es : " + ((precio * cantidad) - precio * 0.2));
             } else {
