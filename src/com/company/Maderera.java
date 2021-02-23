@@ -16,7 +16,7 @@ public class Maderera {
         Cliente cliente = new Cliente("Tatiana", "150 metros s....", LocalDate.of(2021,02,8));
         cliente.comprarModelo(placa3.getTipoDeModelo(),cliente.getFechaDeRetiro(), cliente.getNombre(),3);
 
-        ClienteCorporativo clienteCorporativo = new ClienteCorporativo("Nick", "150 metros sur...", LocalDate.now());
-        clienteCorporativo.comprarCorte(3,clienteCorporativo.getNombre(),clienteCorporativo.getFechaDeRetiro());
+        ClienteCorporativo clienteCorporativo = new ClienteCorporativo("Nick", "150 metros sur...", LocalDate.of(2021,02,9));
+        clienteCorporativo.comprarCorte(2,clienteCorporativo.getNombre(),clienteCorporativo.getFechaDeRetiro());
     }
 }
