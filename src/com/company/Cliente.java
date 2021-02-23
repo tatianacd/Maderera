@@ -52,7 +52,7 @@ public class Cliente {
 
         }else{
 
-            System.out.println("¡ "+nombreDelCliente+" ! El total a pagar es: " + precio * 0.2 + precio * cantidad);
+            System.out.println("¡ "+nombreDelCliente+" ! El total a pagar es: " + (precio * 0.2 + precio) * cantidad);
 
         }
 

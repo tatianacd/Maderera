@@ -14,7 +14,7 @@ public class Maderera {
         Placa placa4 = new Placa(5);
 
         Cliente cliente = new Cliente("Tatiana", "150 metros s....", LocalDate.now());
-        cliente.comprarModelo(placa.getTipoDeModelo(),cliente.getFechaDeRetiro(), cliente.getNombre(),3);
+        cliente.comprarModelo(placa3.getTipoDeModelo(),cliente.getFechaDeRetiro(), cliente.getNombre(),3);
 
         ClienteCorporativo clienteCorporativo = new ClienteCorporativo("Nick", "150 metros sur...", LocalDate.now());
         clienteCorporativo.comprarCorte(3,clienteCorporativo.getNombre(),clienteCorporativo.getFechaDeRetiro());
