@@ -10,6 +10,7 @@ public class Cliente {
     private LocalDate fechaDeRetiro;
     Scanner sc = new Scanner(System.in);
     double precio = 3000;
+
     public Cliente(String nombre, String direccion, LocalDate fechaDeRetiro) {
         this.nombre = nombre;
         this.direccion = direccion;
@@ -41,28 +42,22 @@ public class Cliente {
     }
 
 
-    public void comprarModelo(Integer numeroDePlaca, LocalDate fechaDeRetiro, String nombreDelCliente, Integer cantidad){
+    public void comprarModelo(Integer numeroDePlaca, LocalDate fechaDeRetiro, String nombreDelCliente, Integer cantidad) {
 
-    if(fechaDeRetiro.getDayOfMonth()> 10){
+        if (fechaDeRetiro.getDayOfMonth() < 10) {
+            if (numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3) {
+                System.out.println("¡ " + nombreDelCliente + " ! Como lo retiraste en los primeros 10 dias del mes tienes un 20% de descuento adicional,  El total a pagar es : " + ((precio * cantidad) - precio * 0.2));
+            } else {
+                System.out.println("¡ " + nombreDelCliente + " ! Como lo retiraste en los primeros 10 dias del mes tienes un 20% de descuento adicional, El total a pagar es: " + (((precio * 0.2 + precio) * cantidad) - precio * 0.2));
+            }
 
-    }
-        if(numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3){
-
-
-            System.out.println("¡ "+nombreDelCliente+" ! El total a pagar es : " + precio * cantidad);
-
-
-        }else{
-
-            System.out.println("¡ "+nombreDelCliente+" ! El total a pagar es: " + (precio * 0.2 + precio) * cantidad);
-
+        } else {
+                if (numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3) {
+                    System.out.println("¡ " + nombreDelCliente + " ! El total a pagar es : " + (precio * cantidad));
+                } else {
+                    System.out.println("¡ " + nombreDelCliente + " ! El total a pagar es: " + ((precio * 0.2 + precio) * cantidad));
+                }
+            }
         }
-
     }
-
-
-
-
-}
-
 
