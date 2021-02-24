@@ -8,7 +8,6 @@ public class Cliente {
     private String nombre;
     private String direccion;
     private LocalDate fechaDeRetiro;
-    Scanner sc = new Scanner(System.in);
     double precio = 3000;
 
     public Cliente(String nombre, String direccion, LocalDate fechaDeRetiro) {
@@ -48,20 +47,20 @@ public class Cliente {
             return false;
         }
     }
-    public void comprarModelo(Integer numeroDePlaca, LocalDate fechaDeRetiro, String nombreDelCliente, Integer cantidad) {
+    public void comprarModelo(Integer numeroDePlaca,  Integer cantidad) {
 
-        if (is10Dias(fechaDeRetiro)) {
+        if (is10Dias(this.getFechaDeRetiro())) {
             if (numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3) {
-                System.out.println("¡ " + nombreDelCliente + " ! Como lo retiraste en los primeros 10 dias del mes tienes un 20% de descuento adicional,  El total a pagar es : " + ((precio * cantidad) - precio * 0.2));
+                System.out.println("¡ " + this.getNombre() + " ! Como lo retiraste en los primeros 10 dias del mes tienes un 20% de descuento adicional,  El total a pagar es : " + ((precio * cantidad) - precio * 0.2));
             } else {
-                System.out.println("¡ " + nombreDelCliente + " ! Como lo retiraste en los primeros 10 dias del mes tienes un 20% de descuento adicional, El total a pagar es: " + (((precio * 0.2 + precio) * cantidad) - precio * 0.2));
+                System.out.println("¡ " + this.getNombre() + " ! Como lo retiraste en los primeros 10 dias del mes tienes un 20% de descuento adicional, El total a pagar es: " + (((precio * 0.2 + precio) * cantidad) - precio * 0.2));
             }
 
         } else {
                 if (numeroDePlaca == 1 || numeroDePlaca == 2 || numeroDePlaca == 3) {
-                    System.out.println("¡ " + nombreDelCliente + " ! El total a pagar es : " + (precio * cantidad));
+                    System.out.println("¡ " + this.getNombre() + " ! El total a pagar es : " + (precio * cantidad));
                 } else {
-                    System.out.println("¡ " + nombreDelCliente + " ! El total a pagar es: " + ((precio * 0.2 + precio) * cantidad));
+                    System.out.println("¡ " + this.getNombre() + " ! El total a pagar es: " + ((precio * 0.2 + precio) * cantidad));
                 }
             }
         }
